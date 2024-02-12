@@ -1,0 +1,169 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_robot_2</toolbox>
+  <block type="base_setup_loop" id="^vT@3PRGPQy}K]If{@K3" x="-4" y="48">
+    <statement name="DO">
+      <block type="variables_set_init" id="J.[yy;/}:Sg)BKIa4*ke">
+        <field name="VAR">z</field>
+        <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+        <value name="VALUE">
+          <block type="math_number" id="m)8dMvM{EaGVdB.Z?KVI">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="ardublock_block13" id="9m6_XUQ/#wzXKxN.DrI_">
+            <field name="dropdown">1</field>
+            <field name="delay">2</field>
+            <next>
+              <block type="ardublock_block5" id=".cnTU}.[zI.MYV{v(zis">
+                <field name="delay">3000</field>
+                <next>
+                  <block type="ardublock_block13" id="D0atP{JmXK7?T$Z0na:e">
+                    <field name="dropdown">4</field>
+                    <field name="delay">2</field>
+                    <next>
+                      <block type="ardublock_block8" id="Nxo{~0rH|in7#[Ih8iLh">
+                        <field name="gradus">120</field>
+                        <next>
+                          <block type="ardublock_block5" id="6@G3nnpk~{s-u)C:R4x.">
+                            <field name="delay">3000</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="ardublock_block12" id="|a/eFcRsd#F3wcv;usSl">
+        <statement name="top">
+          <block type="ardublock_block13" id="[%M=P`#y`Bn1db|PPA0.">
+            <field name="dropdown">6</field>
+            <field name="delay">2</field>
+          </block>
+        </statement>
+        <statement name="bot">
+          <block type="ardublock_block13" id="VeU~rw}vI.hih}9^OW+^">
+            <field name="dropdown">2</field>
+            <field name="delay">2</field>
+          </block>
+        </statement>
+        <statement name="left">
+          <block type="ardublock_block10" id="1a%vOemw,/D*$!xAEC1%">
+            <field name="gradus">10</field>
+            <field name="delay">70</field>
+          </block>
+        </statement>
+        <statement name="righit">
+          <block type="ardublock_block10" id="Q(/tKzLP|svE(bTg^e:5">
+            <field name="gradus">170</field>
+            <field name="delay">70</field>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="CtOP/_%`;.||iT}9Az?U">
+            <value name="IF0">
+              <block type="digital_readbiR" id="E!Fe(r0Jf|)nc[da)9Rl">
+                <field name="NUMBER">1</field>
+                <value name="PIN">
+                  <shadow type="math_number" id=")?b!kq}B(|F~{Yl{fyP*">
+                    <field name="NUM">8</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="G;IbtnGjVpZ+uW30kzaq">
+                <value name="IF0">
+                  <block type="logic_compare_log" id="HK[g$$bL2N7)z?`:9/LD">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <shadow type="math_number" id="A1K=j$KlopeDp59yr-,/">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="variables_get" id="8@Znzf_,Q8@u/{jWcgzi">
+                        <field name="VAR">z</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="}q^L{^tWl^-sU4eEj538">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="E3+/U.2DM)7t$uMCXA}4">
+                    <field name="VAR">z</field>
+                    <value name="VALUE">
+                      <block type="math_number" id=".1X[L`Kj)jI.d_s5//9s">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="ardublock_block8" id="PIVLo/y~OO/s.6UsAe[B">
+                        <field name="gradus">20</field>
+                        <next>
+                          <block type="ardublock_block5" id="o4+QN$_}WEJK|u+p]t8[">
+                            <field name="delay">3000</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="b/[${1gOBBul-R0)@m=u">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="7RI}89W{rJKwq{;@:NxE">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="A1K=j$KlopeDp59yr-,/">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="variables_get" id="-]f]N6{:^5@390VscJV:">
+                            <field name="VAR">z</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="f3crf=lfXm#E~2Olm${y">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="ardublock_block8" id="C]y#!R6)(iK|e{ry~cn4">
+                        <field name="gradus">20</field>
+                        <next>
+                          <block type="variables_set" id="P/~Y7YCILSKhzFD|{8tC">
+                            <field name="VAR">z</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="j?zlY(Sn~aZ]a-e^7oJ!">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="ardublock_block5" id="x.%L)EC.FAX5FgtnO^z)">
+                                <field name="delay">3000</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,49 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_robot_2</toolbox>
+  <block type="base_setup_loop" id="D{1DN{Y.~)FDia`h?HL]" x="-4" y="48">
+    <statement name="DO">
+      <block type="ardublock_block13" id="$?NzgvO3!ONPjX[iDvB]">
+        <field name="dropdown">1</field>
+        <field name="delay">2</field>
+        <next>
+          <block type="ardublock_block5" id="4)YN,8$X[4-h/Y[p]n#o">
+            <field name="delay">1000</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="ardublock_block13" id="v%RDLhP?M}qg,/?t7+hk">
+        <field name="dropdown">4</field>
+        <field name="delay">2</field>
+        <next>
+          <block type="ardublock_block5" id="vC.ckW;gF#(C8sH0-Ojf">
+            <field name="delay">700</field>
+            <next>
+              <block type="ardublock_block10" id="I/B*YJ$KKpCf?HnM/^Pu">
+                <field name="gradus">40</field>
+                <field name="delay">60</field>
+                <next>
+                  <block type="ardublock_block5" id="AzVy3@C|gbn99F{.,@52">
+                    <field name="delay">700</field>
+                    <next>
+                      <block type="ardublock_block10" id="PKBLPub!5:H;aL;:lwCh">
+                        <field name="gradus">170</field>
+                        <field name="delay">60</field>
+                        <next>
+                          <block type="ardublock_block5" id="z=|Wdnu,Ef@BQt{[)kI0">
+                            <field name="delay">1500</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
