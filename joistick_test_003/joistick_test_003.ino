@@ -5,6 +5,8 @@ boolean catchIsClosed = true;
 int horizontalAngle;
 boolean catchControl = false;
 int catchAngle;
+int servo4Angle;
+int servo6Angle;
 
 VarSpeedServo myServo3;
 VarSpeedServo myServo4;
@@ -48,7 +50,8 @@ void setup()
 
     myServo6.slowmove(180,30);
     delay(700);
-    myServo4.slowmove(50,30);
+    servo4Angle = 50;
+    myServo4.slowmove(servo4Angle,30);
     delay(700);
     myServo5.slowmove(150,30);
     delay(700);
@@ -75,12 +78,25 @@ void loop()
         }
         else
         {
-            myServo4.slowmove(70,20);
-            delay(500);
-            myServo5.slowmove(150,20);
-            delay(500);
-            myServo6.slowmove(150,20);
-            delay(500);
+            servo4Angle = servo4Angle - 1;
+            if(servo4Angle < 40)
+            {
+                servo4Angle = 40;
+            }
+            myServo4.slowmove(servo4Angle, 20);
+            servo6Angle = servo6Angle + 1;
+            if(servo6Angle > 180)
+            {
+                servo6Angle = 180;
+            }
+            myServo6.slowmove(servo6Angle, 20);
+            delay(15);
+            // myServo4.slowmove(70,20);
+            // delay(500);
+            // myServo5.slowmove(150,20);
+            // delay(500);
+            // myServo6.slowmove(150,20);
+            // delay(500);
         }
     } 
     else if (analogRead(A0) > 700) 
@@ -97,12 +113,25 @@ void loop()
         }
         else
         {
-            myServo6.slowmove(170,20);
-            delay(500);
-            myServo4.slowmove(110,20);
-            delay(500);
-            myServo5.slowmove(150,20);
-            delay(500);
+            servo4Angle = servo4Angle + 1;
+            if(servo4Angle > 130)
+            {
+                servo4Angle = 130;
+            }
+            myServo4.slowmove(servo4Angle, 20);
+            servo6Angle = servo6Angle - 1;
+            if(servo6Angle < 130)
+            {
+                servo6Angle = 130;
+            }
+            myServo6.slowmove(servo6Angle, 20);
+            delay(15);
+            // myServo6.slowmove(170,20);
+            // delay(500);
+            // myServo4.slowmove(110,20);
+            // delay(500);
+            // myServo5.slowmove(150,20);
+            // delay(500);
         }
         
     } 
